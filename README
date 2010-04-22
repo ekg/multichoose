@@ -4,7 +4,9 @@ Erik Garrison <erik.garrison@bc.edu>
 
 multichoose.cpp --
 
-This is a small C++ program which contains a generic function to generate multisets for vectors of any type of object.  You can test out the program using strings input from the command line by typing:
+This is a small C++ library/program which contains a generic function to
+generate multisets for vectors of any type of object.  You can test out the
+program using strings input from the command line by typing:
 
     % make
 
@@ -20,16 +22,16 @@ Prints usage information:
 Example usage:
 
     % ./multichoose 2 a t g c
-    ( c c )
-    ( g c )
-    ( g g )
-    ( t c )
-    ( t g )
-    ( t t )
-    ( a c )
-    ( a g )
-    ( a t )
-    ( a a )
+    a a 
+    a t 
+    a g 
+    a c 
+    t t 
+    t g 
+    t c 
+    g g 
+    g c 
+    c c 
 
 This example lists all the possible *unordered' genotypes at a given genetic
 loci of which there are two copies (e.g. chromosomes).  'k' (2 in this case)

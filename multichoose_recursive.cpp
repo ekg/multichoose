@@ -38,13 +38,12 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 using namespace std;
 
-typedef vector<int> multiset;
 template <class T> vector< vector<T> > multichoose(vector<T> objects, int k);
-vector<multiset> multichoose(int n, int k);
+vector<vector<int> > multichoose(int n, int k);
 
-ostream& operator<<(ostream& stream, multiset m) {
+ostream& operator<<(ostream& stream, vector<int>  m) {
     stream << "( ";
-    for (multiset::const_iterator i = m.begin(); i != m.end(); ++i) {
+    for (vector<int> ::const_iterator i = m.begin(); i != m.end(); ++i) {
         stream << *i << " ";
     }
     stream << ")";
@@ -54,12 +53,12 @@ ostream& operator<<(ostream& stream, multiset m) {
 template <class T>
 vector< vector<T> > multichoose(vector<T> objects, int k) {
     vector< vector<T> > results;
-    vector<multiset> choices = multichoose((int)objects.size(), (int)k);
-    for (vector<multiset>::const_iterator h = choices.begin();
+    vector<vector<int> > choices = multichoose((int)objects.size(), (int)k);
+    for (vector<vector<int> >::const_iterator h = choices.begin();
             h != choices.end(); ++h) {
         vector<T> combination;
         int index = 0;
-        for (multiset::const_iterator i = h->begin(); i != h->end(); ++i) {
+        for (vector<int> ::const_iterator i = h->begin(); i != h->end(); ++i) {
             for (int j = 0; j < *i; ++j) {
                 combination.push_back(objects.at(index));
             }
@@ -70,10 +69,10 @@ vector< vector<T> > multichoose(vector<T> objects, int k) {
     return results;
 }
 
-vector<multiset> multichoose(int n, int k) {
-    vector<multiset> multichoices;
+vector<vector<int> > multichoose(int n, int k) {
+    vector<vector<int> > multichoices;
     if (!k) {
-        multiset x (n, 0);
+        vector<int>  x (n, 0);
         multichoices.push_back(x);
         return multichoices;
     }
@@ -81,18 +80,18 @@ vector<multiset> multichoose(int n, int k) {
         return multichoices;
     }
     if (n == 1) {
-        multiset x (1, k);
+        vector<int> x (1, k);
         multichoices.push_back(x);
         return multichoices;
     }
-    vector<multiset> multichoices_head = multichoose(n - 1, k);
-    for (vector<multiset>::iterator h = multichoices_head.begin(); 
+    vector<vector<int> > multichoices_head = multichoose(n - 1, k);
+    for (vector<vector<int> >::iterator h = multichoices_head.begin(); 
             h != multichoices_head.end(); ++h) {
         h->insert(h->begin(),0);
         multichoices.push_back(*h);
     }
-    vector<multiset> multichoices_tail = multichoose(n, k - 1);
-    for (vector<multiset>::iterator h = multichoices_tail.begin(); 
+    vector<vector<int> > multichoices_tail = multichoose(n, k - 1);
+    for (vector<vector<int> >::iterator h = multichoices_tail.begin(); 
             h != multichoices_tail.end(); ++h) {
         h->front()++;
         multichoices.push_back(*h);
@@ -116,12 +115,11 @@ int main(int argc, char** argv) {
 
     vector< vector<string*> > results = multichoose(items, k);
 
-    for (vector< vector<string*> >::const_iterator i = results.begin(); i != results.end(); ++i) {
-        cout << "( ";
+    for (vector< vector<string*> >::reverse_iterator i = results.rbegin(); i != results.rend(); ++i) {
         for (vector<string*>::const_iterator j = i->begin(); j != i->end(); ++j) {
             cout << **j << " ";
         }
-        cout << ")" << endl;
+        cout << endl;
     }
 
     return 0; 
