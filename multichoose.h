@@ -1,6 +1,6 @@
 /* 
 
-multichoose.hpp  -- k multichoose n for generic vectors
+multichoose.h  -- n multichoose k for generic vectors
 
 author: Erik Garrison <erik.garrison@bc.edu>
 last revised: 2010-04-16
@@ -31,21 +31,18 @@ OTHER DEALINGS IN THE SOFTWARE.
 */
 
 
-using namespace std;
-
-
-// provides multiset combinations out of the vector of objects
+// provides multiset combinations out of the std::vector of objects
 template <class T>
-vector< vector<T> > multichoose(int k, vector<T>& objects) {
+std::vector< std::vector<T> > multichoose(int k, std::vector<T>& objects) {
 
-    vector< vector<T> > choices;
+    std::vector< std::vector<T> > choices;
 
     int j,j_1,q,r;
 
     r = objects.size() - 1;
 
     // combination indexes
-    vector<T*> a, b;
+    std::vector<T*> a, b;
 
     for (int i=0;i<k;i++) {
         a.push_back(&objects[0]); b.push_back(&objects[r]);
@@ -53,7 +50,7 @@ vector< vector<T> > multichoose(int k, vector<T>& objects) {
 
     j=k;
     while(1){
-        vector<T> multiset;
+        std::vector<T> multiset;
         for(int i=0;i<k;i++)
             multiset.push_back(*a[i]);
         choices.push_back(multiset);
@@ -80,16 +77,16 @@ vector< vector<T> > multichoose(int k, vector<T>& objects) {
 // test to see if the pointer version provides a performance boost on large objects
 //
 template <class T>
-vector< vector<T*> > multichoose_ptr(int k, vector<T>& objects) {
+std::vector< std::vector<T*> > multichoose_ptr(int k, std::vector<T>& objects) {
 
-    vector< vector<T*> > choices;
+    std::vector< std::vector<T*> > choices;
 
     int j,j_1,q,r;
 
     r = objects.size() - 1;
 
     // combination indexes
-    vector<T*> a, b;
+    std::vector<T*> a, b;
 
     for (int i=0;i<k;i++) {
         a.push_back(&objects[0]); b.push_back(&objects[r]);
@@ -97,7 +94,7 @@ vector< vector<T*> > multichoose_ptr(int k, vector<T>& objects) {
 
     j=k;
     while(1){
-        vector<T*> multiset;
+        std::vector<T*> multiset;
         for(int i=0;i<k;i++)
             multiset.push_back(a[i]);
         choices.push_back(multiset);

@@ -1,6 +1,6 @@
 /* 
 
-multichoose.cpp  -- k multichoose n for generic vectors
+multichoose.cpp  -- n multichoose k for generic vectors
 
 author: Erik Garrison <erik.garrison@bc.edu>
 last revised: 2010-04-16
@@ -34,7 +34,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 #include <vector>
 #include <list>
 #include <stdlib.h>
-#include "multichoose.hpp"
+#include "multichoose.h"
 
 
 using namespace std;
