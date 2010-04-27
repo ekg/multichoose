@@ -48,17 +48,16 @@ int main(int argc, char** argv) {
     }
 
     int k = atoi(argv[1]);
-    vector<string*> items;
+    vector<string> items;
     for (int i = 2; i < argc; ++i) {
-        string* s = new string(argv[i]);
-        items.push_back(s);
+        items.push_back(string(argv[i]));
     }
 
-    vector< vector<string*> > results = multichoose(k, items);
+    vector< vector<string> > results = multichoose(k, items);
 
-    for (vector< vector<string*> >::const_iterator i = results.begin(); i != results.end(); ++i) {
-        for (vector<string*>::const_iterator j = i->begin(); j != i->end(); ++j) {
-            cout << **j << " ";
+    for (vector< vector<string> >::const_iterator i = results.begin(); i != results.end(); ++i) {
+        for (vector<string>::const_iterator j = i->begin(); j != i->end(); ++j) {
+            cout << *j << " ";
         }
         cout << endl;
     }
