@@ -37,12 +37,11 @@ def multichoose(k, objects):
     j,j_1,q = k,k,k  # init here for scoping
     r = len(objects) - 1
     a = [0 for i in range(k)] # initial multiset indexes
-    b = [r for i in range(k)] # end multiset indexes
     while True:
         choices.append([objects[a[i]] for i in range(0,k)])  # emit result
         j = k
         j -= 1
-        while j >= 0 and a[j] == b[j]: j -= 1
+        while j >= 0 and a[j] == r: j -= 1
         if j < 0: break  # check for end condition
         j_1 = j
         while j_1 <= k - 1:
