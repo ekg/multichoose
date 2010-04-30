@@ -46,10 +46,10 @@ def multichoose(k, objects):
         if j < 0: break  # check for end condition
         j_1 = j
         while j_1 <= k - 1:
-            a[j_1] = a[j_1] + 1  # shift item left
+            a[j_1] = a[j_1] + 1 # increment
             q = j_1
             while q < k - 1:
-                a[q+1] = a[q] # shift item right
+                a[q+1] = a[q] # shift left
                 q += 1
             q += 1
             j_1 = q
