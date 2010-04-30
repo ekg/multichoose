@@ -39,8 +39,7 @@ def multichoose(k, objects):
     a = [0 for i in range(k)] # initial multiset indexes
     while True:
         choices.append([objects[a[i]] for i in range(0,k)])  # emit result
-        j = k
-        j -= 1
+        j = k - 1
         while j >= 0 and a[j] == r: j -= 1
         if j < 0: break  # check for end condition
         j_1 = j
