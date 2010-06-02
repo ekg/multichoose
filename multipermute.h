@@ -2,6 +2,9 @@
 
 multipermute.h  -- multiset permutations for generic vectors
 
+Follows 'Algorithm 1' from "Loopless Generation of Multiset Permutations using
+a Constant Number of Variables by Prefix Shifts."  Aaron Williams, 2009
+
 author: Erik Garrison <erik.garrison@bc.edu>
 last revised: 2010-04-16
 
