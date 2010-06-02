@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# multisetpermutations.py - permutations of a multiset
+# multipermute.py - permutations of a multiset
 # Erik Garrison <erik.garrison@bc.edu> 2010
 
 """
