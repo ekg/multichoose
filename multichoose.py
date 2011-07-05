@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 """
 
 multichoose.py  -- non-recursive n multichoose k for python lists
@@ -51,26 +53,3 @@ def multichoose(k, objects):
             q += 1
             j_1 = q
 
-def multiset_permutations(k, multiset):
-"""
-   initialize a to be the first permutation on S;
-   initialize up[i] and down[i] to i for i = 0, ..., n; 
-   initialize nodes[i] to (a[i]) for i = 1, ..., n;
-   i := n − |tail(a)| + 1; repeat
-   if nodes[i − 1] has not been updated by a[i − 1]’s children then update it; output(a);
-   if a[i] is not a last child then 
-       swap(a[i], a[s[i]]); {action cross} 
-   update nodes[i − 1];
-   if a[i] is a last child then begin 
-       up[i]:=up[i−1]; 
-       up[i−1]:=i−1; 
-       update s[up[i]]; 
-       update down[up[i]];
-       if i = n − |tail(a)| + 1 {a[i], ..., a[n] form a straight line} then 
-           i := up[i]; {going up} 
-       else i := down[i]; {going down}
-   end 
-   else {a[i] is not a last child}
-       i := down[i] {going down} 
-   until i = 0 {root level}.
-"""
