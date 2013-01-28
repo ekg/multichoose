@@ -38,3 +38,8 @@ loci of which there are two copies (e.g. chromosomes).  'k' (2 in this case)
 could be understood as the expected ploidy of the given locus.  Applying
 multiset permutations to each of the results would generate all possible
 ordered multisets.
+
+This library implements a multiset permutation generation method described in:
+
+"Loopless Generation of Multiset Permutations using a Constant Number of
+Variables by Prefix Shifts." Aaron Williams, 2009
