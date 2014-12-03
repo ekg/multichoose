@@ -1,7 +1,7 @@
 {
   "name": "multichoose",
   "version": "1.0.2",
-  "description": "generate multiset permutations and combinations using an efficient loopless algorithm",
+  "description": "generate multiset combinations using an efficient loopless algorithm",
   "main": "index.js",
   "scripts": {
     "test": "node test.js | tap-spec"

@@ -1,5 +1,5 @@
 var test = require('tape')
-var multichoose = require('multichoose')
+var multichoose = require('./')
 
 test('multichoose test', function (t) {
 
