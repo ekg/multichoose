@@ -1,6 +1,6 @@
 {
   "name": "multichoose",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "generate multiset permutations and combinations using an efficient loopless algorithm",
   "main": "index.js",
   "scripts": {

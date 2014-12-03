@@ -78,7 +78,7 @@ g g
 g c 
 c c 
 
-This example lists all the possible *unordered' genotypes at a given genetic loci of which there are two copies (e.g. chromosomes).  In this case `k` (=2) could be understood as the expected ploidy of the given locus.
+This example lists all the possible *unordered* genotypes at a given genetic loci of which there are two copies (e.g. chromosomes).  In this case `k` (=2) could be understood as the expected ploidy of the given locus.
 
 (Note that this is not currently built as the default binary for the npm module, which uses cli.js.)
 
