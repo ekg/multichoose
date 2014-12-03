@@ -1,0 +1,34 @@
+{
+  "name": "multichoose",
+  "version": "1.0.0",
+  "description": "generate multiset permutations and combinations using an efficient loopless algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js | tap-spec"
+  },
+  "bin": {
+    "multichoose": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ekg/multichoose.git"
+  },
+  "keywords": [
+    "multiset",
+    "combinations",
+    "multichoose",
+    "combinatorics",
+    "math"
+  ],
+  "author": "Erik Garrison",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "0d5c4079a071cc15993f2c8d9e3081dff9a1ce0d",
+  "dependencies": {
+    "range": "0.0.2"
+  },
+  "devDependencies": {
+    "tap-spec": "^2.1.1",
+    "tape": "^3.0.3"
+  }
+}
