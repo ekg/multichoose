@@ -76,7 +76,8 @@ t g
 t c 
 g g 
 g c 
-c c 
+c c
+```
 
 This example lists all the possible *unordered* genotypes at a given genetic loci of which there are two copies (e.g. chromosomes).  In this case `k` (=2) could be understood as the expected ploidy of the given locus.
 
