@@ -17,5 +17,5 @@ cmultichoose: multichoose.c
 	${CC} multichoose.c -o cmultichoose
 
 clean:
-	rm cmultichoose
-	rm multichoose
+	rm -f cmultichoose
+	rm -f multichoose
