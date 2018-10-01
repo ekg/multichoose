@@ -19,3 +19,4 @@ cmultichoose: multichoose.c
 clean:
 	rm -f cmultichoose
 	rm -f multichoose
+	rm -f multipermute
